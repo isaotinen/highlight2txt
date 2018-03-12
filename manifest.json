@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "highlight2txt",
+  "version": "1.0",
+  "description": "Convert Kindle highlights to text",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "tabs","http://*/*","https://*/*","file:///*"
+  ],
+  "icons" : {
+    "128": "icon.png"
+  },
+  "background": {
+    "scripts": ["js/background.js" ],
+    "persistent": false
+  }
+}
