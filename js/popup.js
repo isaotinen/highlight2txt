@@ -1,16 +1,7 @@
-$(function () {
-    // chrome.tabs.executeScript(null, {
-    //     "code": "document.getElementByTagName('h3').innerHTML"
-    // }, function(result) {
-    //     $('#title').text(result);
-    // });
-
-    chrome.tabs.executeScript(null, {
-        "code": "document.getElementById('highlight').innerHTML"
-    }, function(result) {
-        $('#highlight').text(result);
-    });
-
+chrome.tabs.executeScript(null, {
+    "code": "document.getElementById('highlight').innerHTML"
+}, function(result) {
+    document.getElementById('highlight').textContent = result
 });
 
 //クリックしたらコピー
