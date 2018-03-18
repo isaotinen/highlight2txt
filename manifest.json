@@ -8,13 +8,13 @@
     "default_icon": "icon.png"
   },
   "permissions": [
-    "tabs","http://*/*","https://*/*","file:///*"
+    "tabs","activeTab"
   ],
   "icons" : {
     "128": "icon.png"
   },
   "background": {
-    "scripts": ["js/background.js" ],
+    "scripts": ["js/getHighlight.js" ],
     "persistent": false
   }
 }
