@@ -6,13 +6,10 @@
   "permissions": [
     "tabs","activeTab"
   ],
-  "icons" : {
-    "128": "icon.png"
-  },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["js/content.js"]
+      "matches": ["https://read.amazon.co.jp/*"],
+      "js": ["./content.js"]
     }
     ]
 }

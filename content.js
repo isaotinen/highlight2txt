@@ -1,6 +1,6 @@
 'use strict';
 
-var buttonTargetId = "test1"
+var buttonTargetId = "kp-notebook-head"
 var createButton = document.createElement("button");
 createButton.innerText = "Show Highlights";
 createButton.onclick = showHighlight;
@@ -16,8 +16,5 @@ function add(id, tag){
 
 function showHighlight() {
   highlightArea.innerHTML = '<textarea id="highlightarea" name="contents" rows="30" cols="100"></textarea>';
-  Array.from(document.querySelectorAll('div.aaa'), function(e){
-    document.getElementById("highlightarea").innerText = e.innerText;
-  });
+  document.getElementById("highlightarea").value = Array.from( document.querySelectorAll( 'span.a-size-base-plus.a-color-base' ), e => e.innerText ).join( "\n" );
 }
-//テキストエリア作って書き込むとこまで。繰り返し処理すると最後の内容しか表示されない。
